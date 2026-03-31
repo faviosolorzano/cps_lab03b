@@ -7,11 +7,12 @@ import java.util.List;
 public class StudentService {
     private StudentRepository repository = new StudentRepository();
 
-    public void registrar(StudentEntity student) {
-        repository.guardar(student);
-    }
-
-    public List<StudentEntity> obtenerTodos() {
-        return repository.listar();
+    public void registrar(StudentEntity student) { repository.guardar(student); }
+    public List<StudentEntity> obtenerTodos() { return repository.listar(); }
+    public StudentEntity buscarPorId(int id) {
+        for (StudentEntity s : lista) {
+            if (s.getId() == id) return s;
+        }
+        return null;
     }
 }

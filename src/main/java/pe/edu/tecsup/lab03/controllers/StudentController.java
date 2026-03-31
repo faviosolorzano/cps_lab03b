@@ -17,9 +17,12 @@ public class StudentController {
     }
 
     public void listarStudents() {
-        System.out.println("Listando todos los students...");
-        service.obtenerTodos().forEach(s ->
-                System.out.println(s.getId() + " - " + s.getNombre())
-        );
+        service.obtenerTodos().forEach(s -> System.out.println(s.getId() + " - " + s.getNombre()));
+    }
+
+    public void buscarStudent(int id) {
+        StudentEntity s = service.buscarStudent(id);
+        if (s != null) System.out.println("Encontrado: " + s.getNombre());
+        else System.out.println("No encontrado");
     }
 }

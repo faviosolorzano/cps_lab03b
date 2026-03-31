@@ -5,6 +5,9 @@ public class StudentEntity {
     private String nombre;
     private String apellido;
     private String correo;
+    private int edad;
+
+
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
@@ -14,4 +17,7 @@ public class StudentEntity {
     public void setApellido(String apellido) { this.apellido = apellido; }
     public String getCorreo() { return correo; }
     public void setCorreo(String correo) { this.correo = correo; }
+    public int getEdad() { return edad; }
+    public void setEdad(int edad) { this.edad = edad; }
+
 }
