@@ -15,4 +15,11 @@ public class StudentController {
         service.registrar(student);
         System.out.println("Student registrado: " + nombre);
     }
+
+    public void listarStudents() {
+        System.out.println("Listando todos los students...");
+        service.obtenerTodos().forEach(s ->
+                System.out.println(s.getId() + " - " + s.getNombre())
+        );
+    }
 }
